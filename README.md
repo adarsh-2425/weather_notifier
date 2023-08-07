@@ -59,7 +59,7 @@ The app should now be running on http://localhost:3000.
 
 ## Screenshots
 
-![Weather App Screenshot](https://raw.githubusercontent.com/john-doe/weather-app/master/images/screenshot.png)
+![Weather App Screenshot](https://github.com/adarsh-2425/weather_notifier/blob/main/webpage%20screenshot.png)
 
 
 ## Contributing

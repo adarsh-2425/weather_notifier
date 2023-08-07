@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Weather App
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+  body
+    .container
+      h1.text-center Weather App
+
+      // Weather Form
+      form.form-inline.text-center(action="/weather", method="GET")
+        input.form-control.mr-2(type="text", name="city", placeholder="Enter city name")
+        button.btn.btn-primary(type="submit") Get Weather
+
+      // Weather Data
+      if weatherData
+        .mt-5
+          h2.text-center Weather in #{weatherData.name}
+
+          .weather-info.text-center
+            p Temperature: #{weatherData.main.tempCelsius.toFixed(2)} °C
+            p Description: #{weatherData.weather[0].description}
+            p Humidity: #{weatherData.main.humidity} %
+            p Wind Speed: #{weatherData.wind.speed} m/s
+            p Pressure: #{weatherData.main.pressure} hPa
+      else
+        .mt-5
+          h2.text-center Weather data not available
